@@ -1,0 +1,5 @@
+Simple account system made in PHP
+
+- login
+- register
+- session (using cookie)
