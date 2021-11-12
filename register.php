@@ -15,8 +15,8 @@
             // Create prepare statement with arguments of columns in DB
             $ps = $db->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
             // Replace "?" values above with variables in Post method, starting at 1
-            $ps->bindParam(2, $_POST["username"]);
-            $ps->bindParam(3, $hash);
+            $ps->bindParam(1, $_POST["username"]);
+            $ps->bindParam(2, $hash);
             $ps->execute();
             // rowCount() count row edited, verify that one row has been edited so we're sure there is no error
             if($ps->rowCount()==1){
